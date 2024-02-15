@@ -4,6 +4,7 @@ import saludar from "./saludador";
 
 const nombre_input = document.querySelector("#nombre");
 const edad_input = document.querySelector("#edad");
+const genero_input = document.querySelector("#genero");
 const form = document.querySelector("#saludar-form");
 const div = document.querySelector("#resultado-div");
 
@@ -12,11 +13,7 @@ form.addEventListener("submit", (event) => {
 
   const nombre = nombre_input.value;
   const edad = edad_input.value; //agarra el valor del index
+  const genero = genero_input.value;
 
-
-  if(edad > 30){
-    div.innerHTML = "<p> Hola Sr " + saludar(nombre) + "</p>";  
-  } else{
-    div.innerHTML = "<p> Hola " + saludar(nombre) + "</p>";  
-  }
+  div.innerHTML = "<p> Hola " + saludar(nombre, edad, genero) + "</p>";  
 });
