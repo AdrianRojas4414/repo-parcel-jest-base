@@ -14,6 +14,8 @@ form.addEventListener("submit", (event) => {
   const nombre = nombre_input.value;
   const edad = edad_input.value; //agarra el valor del index
   const genero = genero_input.value;
+  const fecha = new Date();
+  const hora = fecha.getHours();
 
   div.innerHTML = "<p> Hola " + saludar(nombre, edad, genero) + "</p>";  
 });
