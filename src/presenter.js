@@ -1,22 +1,21 @@
 import sumar from "./sumador";
 import multiplicar from "./multiplicador";
+import saludar from "./saludador";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const nombre_input = document.querySelector("#nombre");
+const edad_input = document.querySelector("#edad");
+const genero_input = document.querySelector("#genero");
+const form = document.querySelector("#saludar-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const nombre = nombre_input.value;
+  const edad = edad_input.value; //agarra el valor del index
+  const genero = genero_input.value;
+  const fecha = new Date();
+  const hora = fecha.getHours();
 
-  if(event.submitter.id == "sumar-button"){
-    div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
-  }
-  else if (event.submitter.id == "multi-button"){
-    div.innerHTML = "<p>" + multiplicar(firstNumber, secondNumber) + "</p>";
-  }
-  
+  div.innerHTML = "<p> Hola " + saludar(nombre, edad, genero) + "</p>";  
 });
