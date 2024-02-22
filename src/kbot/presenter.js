@@ -1,5 +1,5 @@
-import sumar from "./sumador";
-import multiplicar from "./multiplicador";
+import sumar from "../calculator/sumador";
+import multiplicar from "../calculator/multiplicador";
 import saludar from "./saludador";
 
 const nombre_input = document.querySelector("#nombre");
