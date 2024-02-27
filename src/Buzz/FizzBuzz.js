@@ -22,8 +22,4 @@ function generarFizzBuzz(n){
     }
 }
 
-
-    
-
-
 export default generarFizzBuzz;
