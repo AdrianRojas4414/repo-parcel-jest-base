@@ -44,8 +44,12 @@ describe("Bowling Game",() =>{
         g.roll(4);
         rollMany(16, 0);
         expect(g.Score()).toEqual(24);
-
     })
 
+    it("Se lanza 12 veces y todos son strikes, deberia devolver 300 como score final",() =>{
+        g.resetRolls();
+        rollMany(12, 10);
+        expect(g.Score()).toEqual(300);
+    })
 })
 
