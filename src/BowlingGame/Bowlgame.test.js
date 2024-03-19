@@ -8,6 +8,10 @@ function rollMany(n, pins){
     }
 }
 
+function rollStrike(){
+    g.roll(10);
+}
+
 function rollSpare(){
     g.roll(5);
     g.roll(5);
@@ -31,6 +35,16 @@ describe("Bowling Game",() =>{
         g.roll(3);   // en el siguiente lanzamiento se tiran 3 pinos
         rollMany(17, 0);
         expect(g.Score()).toEqual(16);
+    })
+
+    it("Se hace un strike y se caen 3 y 4 pinos en los siguientes lanzamientos y deberia devolver 24 en el score",() =>{
+        g.resetRolls();
+        rollStrike();
+        g.roll(3);
+        g.roll(4);
+        rollMany(16, 0);
+        expect(g.Score()).toEqual(24);
+
     })
 
 })
