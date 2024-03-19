@@ -6,6 +6,11 @@ class Game{
     roll(pins){
         this.score = this.score + pins;
     }
+
+    resetRoll(){
+        this.score = 0;
+    }
+
     Score(){
         return this.score;
     }

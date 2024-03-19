@@ -9,8 +9,18 @@ describe("Bowling Game",() =>{
     })
 
     it("Se envia 20 puntos a roll y deberia devolver 20 en el score",() =>{
+        g.resetRoll();
         rollMany(20, 1);
         expect(g.Score()).toEqual(20);
+    })
+
+    it("Se envia 20 puntos a roll y deberia devolver 20 en el score",() =>{
+        g.resetRoll();
+        g.roll(5);
+        g.roll(5);  // se realiza un spare
+        g.roll(3);
+        rollMany(1, 0);
+        expect(g.Score()).toEqual(16);
     })
 
 })
