@@ -1,13 +1,13 @@
 class Game{
-    constructor(pins_down){
-        this.pins_down = pins_down;
+    constructor(){
+        this.score = 0;
     }
 
-    roll(n){
-
+    roll(pins){
+        this.score = this.score + pins;
     }
-    score(){
-        return 0;
+    Score(){
+        return this.score;
     }
 }
 
